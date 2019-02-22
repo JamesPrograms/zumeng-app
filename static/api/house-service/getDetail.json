@@ -1,0 +1,30 @@
+{
+    "code": 1,
+    "data": {
+        "id": 1,
+        "uid": 1,
+        "name": "保利星语天涯国际",
+        "building": 2,
+        "unit": 1,
+        "num": "703",
+        "issue": 2,
+        "parlor": 2,
+        "room": 3,
+        "area": 88,
+        "type": 1,
+        "amount": 3000,
+        "tip": 200,
+        "tenantlimit": ["限女生", "不养宠物"],
+        "outdate": 1542211200000,
+        "createtime": 1542077910000,
+        "reservedate": "非工作日",
+        "reservetime": "晚上7点以后",
+        "installation": [0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+        "state": 1,
+        "tagList": ["房屋安静 12", "干净整洁 8", "交通方便 15"],
+        "longitude": 104.050779,
+        "latitude": 30.551915,
+        "banners": ["banner.png", "banner.png", "banner.png", "banner.png", "banner.png"]
+    },
+    "msg": "成功"
+}

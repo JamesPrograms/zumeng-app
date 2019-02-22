@@ -1,0 +1,23 @@
+{
+    "code": 1,
+    "data": [
+        {
+            "id": "1",
+            "username": "小李子",
+            "reserveDate": "2018-11-30",
+            "reserveLimit": "非工作日",
+            "reserveTime": "20:00",
+            "isConfirmed": true,
+            "comment": "房间很小，但很温馨"
+        },
+        {
+            "id": "2",
+            "username": "小deng子",
+            "reserveDate": "2018-11-30",
+            "reserveLimit": "非工作日",
+            "reserveTime": "20:00",
+            "isConfirmed": false
+        }
+    ],
+    "msg": "成功"
+}

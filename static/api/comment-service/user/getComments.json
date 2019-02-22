@@ -1,0 +1,30 @@
+{
+    "code": 1,
+    "data": [
+        {
+            "username": "小仙儿",
+            "avatarUrl": "touxiang2.jpg",
+            "comment": "房子非常的干净，周边有一个大超市，楼下就是公交站，离地铁有1公里",
+            "date": "2018.11.21"
+        },
+        {
+            "username": "小仙儿",
+            "avatarUrl": "touxiang2.jpg",
+            "comment": "房子非常的干净，周边有一个大超市，楼下就是公交站，离地铁有1公里",
+            "date": "2018.11.21"
+        },
+        {
+            "username": "小仙儿",
+            "avatarUrl": "touxiang2.jpg",
+            "comment": "房子非常的干净，周边有一个大超市，楼下就是公交站，离地铁有1公里",
+            "date": "2018.11.21"
+        },
+        {
+            "username": "小仙儿",
+            "avatarUrl": "touxiang2.jpg",
+            "comment": "房子非常的干净，周边有一个大超市，楼下就是公交站，离地铁有1公里",
+            "date": "2018.11.21"
+        }
+    ],
+    "msg": "成功"
+}

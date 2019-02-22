@@ -1,0 +1,461 @@
+@import "reset.less";
+@import "variable.less";
+
+/* =============== set font size start ================ */
+// 由于字体的缩放比例与长度单位是不同步的，所以字体不适合以REM作为单位，本项目以媒体查询的方式实现字体的适应
+@media screen and (max-width: 321px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/* =============== set font size end ================ */
+
+/* =============== common css start ================ */
+body {
+    font-family: @font-family-regular;
+    background-color: @body-bg-color;
+    overflow: hidden;
+}
+
+// template 中第一个外层div容器类
+.wrapper {
+    width: 100%;
+    height: 100%;
+    padding-top: 0.8rem;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+// 容器是否需要添加背景图片
+.wrapper.has-bg-img {
+    background-image: @body-bg-img;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+// 背景色-白色
+.bg-color-white {
+    background-color: @white;
+}
+
+// 粗字体
+.font-bold {
+    font-family: @font-family-bold;
+}
+
+// 主题色
+.theme-color {
+    color: @theme-color;
+}
+
+// 主题色-红色
+.red {
+    color: @red;
+}
+
+// 主题色-黑色（亮黑色）
+.black-bright {
+    color: @black-bright;
+}
+
+// 底部按钮外层容器
+.bottom-btn-wrap {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    padding: .2rem .3rem;
+    box-sizing: border-box;
+    background-color: @white;
+    box-shadow: 0px 1px 20px 0px rgba(176, 176, 176, 0.31);
+}
+
+// 按钮样式（小）
+.custom-btn-small {
+    border-style: none;
+    border-radius: 34px;
+    border: solid 1px #aeaeae;
+    background-color: @white;
+    padding: .2rem .5rem;
+    font-family: @font-family-medium;
+    font-size: .28rem;
+    color: #353535;
+}
+
+// 按钮样式（大）
+.custom-btn-big {
+    width: 100%;
+    padding: .22rem;
+    font-family: @font-family-bold;
+    font-size: .32rem;
+    color: @white;
+    border-style: none;
+    border-radius: 44px;
+    .linear-gradient(#e7e7e7);
+}
+
+.card {
+    margin: .2rem;
+    padding: .3rem .2rem;
+    background-color: @white;
+    border-radius: 4px;
+    box-shadow: 0px 1px 6px 0px rgba(53, 47, 47, 0.06);
+    .input-group {
+        display: flex;
+        margin-bottom: .3rem;
+        span {
+            align-self: center;
+            width: .88rem;
+            font-family: @font-family-medium;
+            font-size: .24rem;
+            color: #353535;
+        }
+        input {
+            flex-grow: 1;
+            height: .8rem;
+            font-size: .24rem;
+            color: @gray;
+            padding: 0 .2rem;
+            background-color: @white;
+            border-radius: 10px;
+            border: solid 1px #dddddd;
+        }
+    }
+    .btn-wrap {
+        margin-top: .7rem;
+        margin-bottom: .15rem;
+        padding-left: 1.55rem;
+        padding-right: 1.55rem;
+    }
+}
+
+.card-title {
+    font-family: @font-family-bold;
+    font-size: .32rem;
+    margin-bottom: .22rem;
+}
+
+// 日期时间选择器样式
+.datetime-picker-wrap {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 1.2rem;
+    padding-right: .2rem;
+    padding-left: .2rem;
+    background-color: #eeeeee;
+    img {
+        width: .34rem;
+        height: .34rem;
+        margin-right: .2rem;
+        align-self: center;
+    }
+    span {
+        flex-grow: 1;
+        align-self: center;
+        font-size: .28rem;
+        color: @gray;
+        background-color: #eeeeee;
+    }
+}
+
+// 提示信息
+.tip-msg {
+    font-family: @font-family-medium;
+    font-size: .28rem;
+    color: #353535;
+    margin-top: .45rem;
+    img {
+        width: .32rem;
+        height: .32rem;
+        margin-right: .1rem;
+        vertical-align: bottom;
+    }
+}
+
+// 主要内容容器
+.content {
+    padding: 0.8rem 0.3rem 0.98rem;
+}
+
+/* =============== common css end ================ */
+
+/* =============== 复写header组件样式start ================ */
+.my-header {
+    font-family: @font-family-bold;
+    color: @black-bright;
+    background-color: @white;
+    height: 0.8rem;
+    padding: 0 0.3rem;
+    &.is-fixed {
+        z-index: 2;
+    }
+    .mintui {
+        font-size: 0.38rem;
+    }
+    .mint-header-title {
+        font-size: 0.32rem;
+    }
+}
+
+/* =============== 复写header组件样式end ================ */
+
+/* =============== 复写vuescroll插件部分样式start ================ */
+.__vuescroll .__refresh, .__vuescroll .__load {
+    font-size: 0.24rem;
+    vertical-align: middle;
+    svg {
+        margin-right: 0.06rem;
+        width: 0.3rem;
+        height: 0.3rem;
+    }
+}
+
+/* =============== 复写vuescroll插件部分样式end ================ */
+/* =============== 复写mint-ui radio组件样式start ================ */
+.mint-radiolist {
+    font-family: @font-family-regular;
+    font-size: .28rem;
+    color: @black;
+}
+
+.mint-radio-input:checked + .mint-radio-core {
+    background-color: @theme-color;
+    border-color: @theme-color;
+}
+
+/* =============== 复写mint-ui radio组件样式end ================ */
+/* =============== 登录相关样式start ================ */
+.main-content {
+    padding: .52rem .95rem 0 .95rem;
+    .tip-msg {
+        display: flex;
+        font-family: @font-family-medium;
+        color: @gray-dim;
+        font-size: .24rem;
+        line-height: .3rem;
+        margin-bottom: .69rem;
+        img {
+            width: .32rem;
+            height: .32rem;
+            padding-right: .11rem;
+        }
+        .tel-num {
+            font-size: .32rem;
+            color: @black;
+        }
+    }
+    .input-wrap {
+        display: flex;
+        align-items: center;
+        height: 1rem;
+        margin-bottom: .4rem;
+        background-color: @white;
+        border-radius: 10px;
+        border: solid 1px @gray-lighter;
+        overflow: hidden;
+        .input-icon {
+            padding: .28rem .22rem;
+            img {
+                width: .4rem;
+                height: .4rem;
+            }
+        }
+        input {
+            width: 100%-4px;
+            height: 100%-4px;
+            color: @gray;
+            font-size: .32rem;
+            text-indent: .07rem;
+            border: none;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            &:focus {
+                outline: none;
+            }
+        }
+        .count-down {
+            padding-right: .22rem;
+            span {
+                display: block;
+                width: .5rem;
+                height: .5rem;
+                line-height: .5rem;
+                color: @white;
+                font-size: .24rem;
+                text-align: center;
+                background-color: @gray-light;
+                border-radius: 50%;
+            }
+        }
+        .sms-resend {
+            width: 2rem;
+            height: .5rem;
+            line-height: .5rem;
+            color: @white-snow;
+            font-size: .24rem;
+            text-align: center;
+            background-color: @gray-light;
+            border-radius: 10px;
+            margin-right: .22rem;
+        }
+    }
+    .custom-btn {
+        display: block;
+        width: 100%;
+        height: .88rem;
+        font-family: @font-family-bold;
+        color: @white;
+        font-size: .32rem;
+        line-height: .36rem;
+        background-color: @gray-light;
+        border-radius: 10px;
+        border: solid 1px @gray-lighter;
+        &:focus {
+            outline: none;
+        }
+        &.next {
+            margin-top: 1.48rem;
+        }
+        &.skip {
+            width: 2.8rem;
+            height: .68rem;
+            font-family: @font-family-medium;
+            color: @gray;
+            font-size: .28rem;
+            background-color: @white-smoke;
+            margin: .41rem auto 0 auto;
+        }
+        &.confirm {
+            margin-top: 4.27rem;
+        }
+        &.btn-enabled {
+            .linear-gradient(@gradient-color-2);
+        }
+    }
+}
+
+/* =============== 登录相关样式end ================ */
+
+/* =============== 自定义地图样式start ================ */
+.custom-map-info-window {
+    display: flex;
+    font-family: @font-family-medium;
+    font-size: .28rem;
+    color: @gray-dim;
+    img {
+        align-self: center;
+        width: 24px;
+        height: 24px;
+    }
+    span {
+        align-self: center;
+        margin-left: .1rem;
+        margin-right: 15px;
+    }
+}
+
+/* =============== 自定义地图样式end ================ */
+
+/* =============== picker选择器样式start ================ */
+.my-picker {
+    height: 0.68rem;
+    border-radius: 0.06rem;
+    background-color: @white;
+    padding: 0 0.22rem;
+    border: 1px solid @gray-lighter;
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    input {
+        font-size: 0.28rem;
+    }
+    img {
+        width: 0.2rem;
+    }
+}
+
+// 覆盖插件样式
+.picker {
+    .picker-title {
+        span {
+            padding: 0 !important;
+            font-size: 0.28rem !important;
+            display: inline-block !important;
+            width: 50% !important;
+            text-align: center !important;
+        }
+        h4 {
+            font-size: 0.28rem;
+        }
+    }
+}
+
+// 覆盖插件样式
+.picker-wheel-wrapper .wheel-scroll .wheel-item {
+    font-size: 0.28rem !important;
+}
+
+/* =============== picker选择器样式end ================ */
+
+/* =============== 覆盖datetime picker原有样式start ================ */
+.mint-datetime-action {
+    font-size: 0.28rem;
+    &.mint-datetime-cancel {
+        color: rgb(153, 153, 153) !important;
+    }
+    &.mint-datetime-confirm {
+        color: rgb(66, 185, 131) !important;
+    }
+}
+
+.mint-datetime-picker {
+    .picker-slot {
+        font-size: 0.28rem;
+    }
+}
+
+.v-modal {
+    opacity: 1;
+    background: rgba(0, 0, 0, .2);
+}
+
+/* =============== 覆盖datetime picker原有样式end ================ */
+
+/* =============== 覆盖mintui toast原有样式start ================ */
+.my-toast {
+    padding: 0.2rem !important;
+    .mint-toast-text {
+        font-size: 0.28rem !important;
+    }
+}
+
+/* =============== 覆盖mintui toast原有样式end ================ */
+
+/* =============== 覆盖mintui MessageBox原有样式start ================ */
+.mint-msgbox-confirm {
+    color: @theme-color;
+}
+
+/* =============== 覆盖mintui MessageBox原有样式end ================ */
+
+/* =============== 覆盖mintui Action sheet原有样式start ================ */
+.mint-actionsheet-listitem, .mint-actionsheet-button {
+    font-size: .26rem;
+}
+
+/* =============== 覆盖mintui Action sheet原有样式end ================ */

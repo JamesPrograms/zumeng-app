@@ -1,0 +1,69 @@
+/*========= common color start =========*/
+// 基本颜色
+@white: #fff;
+@white-smoke: #f5f5f5; // 烟白色
+@white-snow: #fefefe; // 雪白色
+@black: #000;
+@black-bright: #010101;
+@gray: #888888;
+@gray-dark: #aaaaaa; // 暗灰色
+@gray-light: #b2b2b2;
+@gray-lighter: #dddddd;
+@gray-dim: #353535; // 深灰色
+@red: #f45656;
+@theme-color: #0dc6b6; // 主题色
+@gradient-color-1: #29d991; // 渐变组合色
+@gradient-color-2: #09bb07;
+@gradient-color-3: #e7e7e7;
+// 背景颜色
+@body-bg-color: @white-smoke;
+// 背景图片
+@body-bg-img: url("../image/bj_pic.png");
+// less函数
+// 线性背景 参数：线性最后一位颜色值（其余颜色值是默认值）
+.linear-gradient(@color) {
+    background-image: linear-gradient(
+        90deg,
+        @theme-color 0%,
+        @gradient-color-1 100%),
+    linear-gradient(
+        @color,
+        @color);
+    background-blend-mode: normal, normal;
+}
+
+/*========= common color end =========*/
+
+/*========= common font start =========*/
+@font-face {
+    font-family: "PingFang-SC-Regular";
+    src: url("../../assets/font/PingFang/PingFang-SC-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PingFangS-SC-Medium";
+    src: url("../../assets/font/PingFang/PingFang-SC-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PingFang-SC-Bold";
+    src: url("../../assets/font/PingFang/PingFang-SC-Bold.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-family-regular: PingFang-SC-Regular, sans-serif;
+@font-family-medium: PingFangS-SC-Medium, sans-serif;
+@font-family-bold: PingFang-SC-Bold, sans-serif;
+
+// 字体大小
+@font-size-small: @font-size-base - 2px;
+@font-size-base: 16px;
+@font-size-large: @font-size-base + 2px;
+@font-size-huge: @font-size-base + 4px;
+@font-size-very-huge: @font-size-base + 8px;
+/*========= common font end =========*/
